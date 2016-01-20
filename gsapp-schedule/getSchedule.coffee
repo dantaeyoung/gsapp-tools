@@ -31,8 +31,7 @@ casper.wait 2000, ->
 	newSchedule = this.getElementInfo('#ctl00_pc_ListViewGrid').text
 
 casper.then ->
-	this.echo "yo"
-	this.capture('screenshot.png');
+#	this.capture('screenshot.png');
 #	fs.write OLD_FILENAME, newSchedule, 'w' #ONLY DO THIS IF WE NEED TO UPDATE
 
 	oldSchedule = fs.read OLD_FILENAME
