@@ -1,0 +1,17 @@
+{
+  "name": "gsapp-schedule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getSchedule.coffee",
+  "dependencies": {
+    "casper": "^0.1.1",
+    "diff": "^2.2.1",
+    "pushover-notifications": "^0.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
