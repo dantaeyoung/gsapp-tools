@@ -3,7 +3,7 @@ fs = require('fs')
 utils = require('utils')
 childProcess = require("child_process")
 
-OLD_FILENAME = "160120_scan_of_160126_GSAPP_rooms.txt"
+OLD_FILENAME = "data/160120_scan_of_160126_GSAPP_rooms.txt"
 newSchedule = ""
 
 casper.start 'https://ems.cuit.columbia.edu/VirtualEMS/BrowseEvents.aspx', ->
