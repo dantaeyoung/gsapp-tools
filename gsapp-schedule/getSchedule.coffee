@@ -3,7 +3,10 @@ fs = require('fs')
 utils = require('utils')
 childProcess = require("child_process")
 
-OLD_FILENAME = "data/160120_scan_of_160126_GSAPP_rooms.txt"
+THIS_DIR = "/home/provolot/_GITHUB/gsapp-tools/gsapp-schedule/"
+OLD_FILENAME = THIS_DIR + "data/160120_scan_of_160126_GSAPP_rooms.txt"
+PUSH_BASH = THIS_DIR + "pushoverAlert.sh"
+
 newSchedule = ""
 
 casper.start 'https://ems.cuit.columbia.edu/VirtualEMS/BrowseEvents.aspx', ->
@@ -42,7 +45,7 @@ casper.then ->
 		this.echo "SAME"
 	else
 		this.echo "DIFFERSAME" 
-		childProcess.execFile "./pushoverAlert.sh", [], null, (err, stdout, stderr) ->
+		childProcess.execFile PUSH_BASH, [], null, (err, stdout, stderr) ->
 			console.log(stdout)
 			this.echo(stdout)
 	
